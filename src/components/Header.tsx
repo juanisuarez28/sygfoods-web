@@ -22,21 +22,21 @@ const Header = () => {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/95 backdrop-blur shadow-md" : "bg-transparent"}`}>
-      <div className="container mx-auto flex items-center justify-between px-4 py-3 bg-secondary text-primary">
+  return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-primary shadow-md" : "bg-secondary"}`}>
+      <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <a href="#inicio">
           <img src={sygLogo} alt="SYGfoods" className="h-20 md:h-14" />
         </a>
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8">
-          {navItems.map(item => <a key={item.href} href={item.href} className="font-medium text-foreground/80 hover:text-primary transition-colors text-base">
+          {navItems.map(item => <a key={item.href} href={item.href} className={`font-medium transition-colors text-base ${scrolled ? "text-primary-foreground hover:text-accent" : "text-foreground/80 hover:text-primary"}`}>
               {item.label}
             </a>)}
         </nav>
 
         {/* Mobile toggle */}
-        <button className="md:hidden text-foreground" onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir menú">
+        <button className={`md:hidden ${scrolled ? "text-primary-foreground" : "text-foreground"}`} onClick={() => setMenuOpen(!menuOpen)} aria-label="Abrir menú">
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
