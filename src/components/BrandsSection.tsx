@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import alcaLogo from "@/assets/alcafoods-logo.png";
 import qualimaxLogo from "@/assets/qualimax-logo.png";
 
 const brands = [
-  { name: "AlcaFoods", logo: alcaLogo },
-  { name: "Qualimax", logo: qualimaxLogo },
+  { name: "AlcaFoods", logo: alcaLogo, catalogUrl: "/catalogo/alcafoods" },
+  { name: "Qualimax", logo: qualimaxLogo, catalogUrl: "/catalogo/qualimax" },
 ];
 
 const BrandsSection = () => {
@@ -29,8 +30,9 @@ const BrandsSection = () => {
               <Button
                 variant="default"
                 className="rounded-full px-8"
+                asChild
               >
-                Ver catálogo
+                <Link to={brand.catalogUrl}>Ver catálogo</Link>
               </Button>
             </div>
           ))}
