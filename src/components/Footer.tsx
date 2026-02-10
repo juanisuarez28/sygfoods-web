@@ -19,13 +19,13 @@ const Footer = () => {
             <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">Contacto</h4>
             <ul className="space-y-3 text-sm text-background/70">
               <li className="flex items-center gap-2">
-                <Mail size={16} /> info@sygfoods.com
+                <Mail size={16} /> foods@scorygal.com.ar
               </li>
               <li className="flex items-center gap-2">
-                <Phone size={16} /> +54 11 1234-5678
+                <Phone size={16} /> 0800-333-093
               </li>
               <li className="flex items-center gap-2">
-                <MapPin size={16} /> Buenos Aires, Argentina
+                <MapPin size={16} /> RP55 km 65.7, B7620, Balcarce, Buenos Aires, Argentina
               </li>
             </ul>
           </div>

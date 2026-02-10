@@ -3,18 +3,18 @@ import { ShieldCheck, Truck, Handshake } from "lucide-react";
 const values = [
   {
     icon: ShieldCheck,
-    title: "Calidad garantizada",
-    description: "Trabajamos con marcas líderes del mercado brasilero para asegurar los más altos estándares.",
+    title: "Marcas con identidad propia",
+    description: "Creamos y gestionamos marcas con posicionamiento definido, cuidando cada etapa desde el origen hasta la comercialización.",
   },
   {
     icon: Truck,
-    title: "Distribución eficiente",
-    description: "Red logística ágil que asegura la disponibilidad de productos en tiempo y forma.",
+    title: "Gestión integral de la cadena",
+    description: "Controlamos selección de origen, calidad, cumplimiento normativo, logística y comercialización con excelencia operativa.",
   },
   {
     icon: Handshake,
-    title: "Confianza y compromiso",
-    description: "Construimos relaciones a largo plazo con nuestros clientes basadas en la transparencia.",
+    title: "Valor sostenible",
+    description: "Generamos valor para clientes, socios y consumidores a través de una gestión profesional y comprometida con el mercado.",
   },
 ];
 
@@ -27,9 +27,13 @@ const AboutSection = () => {
             Quiénes <span className="text-primary">somos</span>
           </h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            SYGfoods es una empresa dedicada a la distribución de productos alimenticios de origen brasilero.
-            Nos especializamos en llevar las mejores marcas de Brasil directamente a tu negocio,
-            asegurando calidad, frescura y un servicio de excelencia.
+            Somos SyG Foods, una compañía que se especializa en desarrollar y gestionar marcas de alimentos para el mercado argentino, transformando oportunidades globales en productos confiables, accesibles y alineados con el consumo local.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed mt-4">
+            Creamos marcas propias con identidad y posicionamiento definidos, cuidando cada etapa del proceso: selección de origen, calidad, cumplimiento normativo, logística y comercialización. Cada marca se comunica de forma independiente, manteniendo un mismo estándar de excelencia operativa y compromiso con el mercado.
+          </p>
+          <p className="text-muted-foreground text-lg leading-relaxed mt-4">
+            Nuestro propósito es generar valor sostenible para clientes, socios y consumidores, a través de una gestión profesional de toda la cadena alimentaria.
           </p>
         </div>
 
