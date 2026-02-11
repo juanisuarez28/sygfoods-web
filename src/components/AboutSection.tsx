@@ -29,12 +29,6 @@ const AboutSection = () => {
           <p className="text-muted-foreground text-lg leading-relaxed">
             Somos SyG Foods, una compañía que se especializa en desarrollar y gestionar marcas de alimentos para el mercado argentino, transformando oportunidades globales en productos confiables, accesibles y alineados con el consumo local.
           </p>
-          <p className="text-muted-foreground text-lg leading-relaxed mt-4">
-            Creamos marcas propias con identidad y posicionamiento definidos, cuidando cada etapa del proceso: selección de origen, calidad, cumplimiento normativo, logística y comercialización. Cada marca se comunica de forma independiente, manteniendo un mismo estándar de excelencia operativa y compromiso con el mercado.
-          </p>
-          <p className="text-muted-foreground text-lg leading-relaxed mt-4">
-            Nuestro propósito es generar valor sostenible para clientes, socios y consumidores, a través de una gestión profesional de toda la cadena alimentaria.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

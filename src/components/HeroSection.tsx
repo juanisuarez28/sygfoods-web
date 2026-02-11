@@ -11,11 +11,11 @@ const HeroSection = () => {
 
       <div className="relative z-10 container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6">
-          Tu distribuidor de<br />
-          <span className="text-accent">productos brasileros</span>
+          Tu distribuidor de alimentos<br />
+          <span className="text-accent">de calidad importados</span>
         </h1>
         <p className="text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto mb-10">
-          Llevamos las mejores marcas de Brasil a tu negocio. Calidad, confianza y variedad en cada producto.
+          Llevamos las mejores marcas de Brasil y el mundo a tu negocio. Calidad, confianza y variedad en cada producto.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
@@ -27,8 +27,7 @@ const HeroSection = () => {
           </Button>
           <Button
             size="lg"
-            variant="outline"
-            className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8 rounded-full"
+            className="bg-white text-[#003E75] hover:bg-white/90 text-base px-8 rounded-full transition-all"
             asChild
           >
             <a href="#marcas">Nuestras marcas</a>
