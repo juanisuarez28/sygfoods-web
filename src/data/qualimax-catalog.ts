@@ -72,7 +72,7 @@ export const qualimaxProducts: Product[] = [
       cantidad_por_sobre: "30 x 24 g",
     },
     category: "gelatinas",
-    image: "/placeholder.svg",
+    image: "/assets/Gelatina-sin-sabor.png",
   },
   {
     id: "gel-frutilla",
