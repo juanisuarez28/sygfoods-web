@@ -6,6 +6,7 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import sygLogo3 from "@/assets/SYG-logo3.png";
 import qualimaxLogo from "@/assets/qualimax-logo.png";
 import { qualimaxCategories, qualimaxProducts, type Product } from "@/data/qualimax-catalog";
+import Footer from "@/components/Footer";
 
 const CatalogoQualimax = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -111,6 +112,8 @@ const CatalogoQualimax = () => {
           </p>
         )}
       </main>
+
+      <Footer />
 
       {/* Product detail modal */}
       <Dialog open={!!selectedProduct} onOpenChange={() => setSelectedProduct(null)}>
