@@ -3,12 +3,17 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import sygLogo3 from "@/assets/SYG-logo3.png";
 import qualimaxLogo from "@/assets/qualimax-logo.png";
 import { qualimaxCategories, qualimaxProducts, type Product } from "@/data/qualimax-catalog";
 
 const CatalogoQualimax = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  // Brand colors
+  const primaryColor = "#003E75";
+  const secondaryColor = "#DA291C";
 
   const filteredProducts = activeCategory
     ? qualimaxProducts.filter((p) => p.category === activeCategory)
@@ -23,22 +28,27 @@ const CatalogoQualimax = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="bg-primary sticky top-0 z-50 shadow-md">
-        <div className="container mx-auto flex items-center justify-between px-4 py-3">
-          <Link to="/" className="flex items-center gap-2 text-primary-foreground hover:text-accent transition-colors">
+      <header className="bg-[#003E75] sticky top-0 z-50 shadow-md">
+        <div className="container mx-auto flex items-center justify-between px-4 py-1">
+          <Link to="/" className="flex items-center gap-2 text-white hover:text-accent transition-colors">
             <ArrowLeft size={20} />
             <span className="font-medium text-sm">Volver al inicio</span>
           </Link>
-          <img src={qualimaxLogo} alt="Qualimax" className="h-10 md:h-12 object-contain" />
+          <Link to="/">
+            <img src={sygLogo3} alt="SyG Foods" className="h-12 md:h-20 object-contain cursor-pointer" />
+          </Link>
         </div>
       </header>
 
       <main className="container mx-auto px-4 py-12">
-        <div className="text-center mb-12">
-          <h1 className="text-3xl md:text-4xl font-bold text-foreground">
-            Catálogo <span className="text-primary">Qualimax</span>
-          </h1>
-          <p className="text-muted-foreground mt-3 max-w-xl mx-auto">
+        <div className="text-center mb-12 flex flex-col items-center">
+          <div className="flex items-center justify-center gap-3 mb-1">
+            <h1 className="text-xl md:text-3xl font-bold text-foreground">
+              Catálogo
+            </h1>
+            <img src={qualimaxLogo} alt="Qualimax" className="h-16 md:h-20 object-contain" />
+          </div>
+          <p className="text-muted-foreground max-w-xl mx-auto">
             Explorá todos los productos de la línea Qualimax disponibles para distribución.
           </p>
         </div>
@@ -46,7 +56,8 @@ const CatalogoQualimax = () => {
         <div className="flex flex-wrap justify-center gap-3 mb-10">
           <Button
             variant={activeCategory === null ? "default" : "outline"}
-            className="rounded-full"
+            className="rounded-full transition-colors hover:bg-[#DA291C] hover:border-[#DA291C]"
+            style={activeCategory === null ? { backgroundColor: primaryColor } : {}}
             onClick={() => setActiveCategory(null)}
           >
             Todos
@@ -55,7 +66,8 @@ const CatalogoQualimax = () => {
             <Button
               key={cat.id}
               variant={activeCategory === cat.id ? "default" : "outline"}
-              className="rounded-full"
+              className="rounded-full transition-colors hover:bg-[#DA291C] hover:text-white hover:border-[#DA291C]"
+              style={activeCategory === cat.id ? { backgroundColor: primaryColor, borderColor: primaryColor } : {}}
               onClick={() => setActiveCategory(cat.id)}
             >
               {cat.name}
@@ -68,25 +80,25 @@ const CatalogoQualimax = () => {
             <div
               key={product.id}
               onClick={() => setSelectedProduct(product)}
-              className="bg-card rounded-xl border border-border p-4 flex flex-col items-center text-center hover:shadow-lg transition-shadow cursor-pointer"
+              className="bg-card rounded-xl border border-border p-4 flex flex-col items-center text-center hover:shadow-lg transition-shadow cursor-pointer group"
             >
               <div className="w-full aspect-square bg-muted rounded-lg mb-3 flex items-center justify-center overflow-hidden">
                 {product.image ? (
-                  <img src={product.image} alt={product.titulo} className="w-full h-full object-contain p-2" />
+                  <img src={product.image} alt={product.titulo} className="w-full h-full object-contain p-2 group-hover:scale-110 transition-transform duration-300" />
                 ) : (
                   <span className="text-muted-foreground text-xs">Sin imagen</span>
                 )}
               </div>
-              <p className="text-sm font-medium text-foreground leading-tight">
+              <p className="text-sm font-medium text-black leading-tight transition-colors">
                 {product.titulo}
                 {hasDuplicateTitle(product) && (
-                  <span className="block text-xs text-muted-foreground mt-0.5">
+                  <span className="block text-xs text-muted-foreground mt-0.5 font-normal">
                     {product.detalles.peso_neto}
                     {product.detalles.rendimiento && ` — Rinde ${product.detalles.rendimiento}`}
                   </span>
                 )}
               </p>
-              <span className="text-xs text-muted-foreground mt-1">
+              <span className="text-xs mt-1 font-semibold" style={{ color: primaryColor }}>
                 {qualimaxCategories.find((c) => c.id === product.category)?.name}
               </span>
             </div>
@@ -124,8 +136,8 @@ const CatalogoQualimax = () => {
               {/* Info */}
               <div className="md:w-1/2 p-6 flex flex-col gap-4">
                 <div>
-                  <h2 className="text-xl font-bold text-foreground">{selectedProduct.titulo}</h2>
-                  <span className="text-xs text-primary font-medium">
+                  <h2 className="text-xl font-bold text-foreground" style={{ color: primaryColor }}>{selectedProduct.titulo}</h2>
+                  <span className="text-xs font-semibold" style={{ color: secondaryColor }}>
                     {qualimaxCategories.find((c) => c.id === selectedProduct.category)?.name}
                   </span>
                 </div>
@@ -163,24 +175,12 @@ const CatalogoQualimax = () => {
                       <span className="font-medium text-foreground">{selectedProduct.detalles.presentacion}</span>
                     </div>
                   )}
-                  {selectedProduct.detalles.sabores && (
-                    <div className="border-b border-border pb-1">
-                      <span className="text-muted-foreground">Sabores</span>
-                      <div className="flex flex-wrap gap-1 mt-1">
-                        {selectedProduct.detalles.sabores.map((s) => (
-                          <span key={s} className="bg-secondary text-secondary-foreground text-xs px-2 py-0.5 rounded-full">
-                            {s}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
                 </div>
 
                 {selectedProduct.detalles.caracteristicas && (
                   <div className="flex flex-wrap gap-2 mt-auto">
                     {selectedProduct.detalles.caracteristicas.map((c) => (
-                      <span key={c} className="bg-primary/10 text-primary text-xs font-medium px-3 py-1 rounded-full">
+                      <span key={c} className="text-white text-xs font-medium px-3 py-1 rounded-full" style={{ backgroundColor: primaryColor }}>
                         {c}
                       </span>
                     ))}

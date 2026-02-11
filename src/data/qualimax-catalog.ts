@@ -36,7 +36,7 @@ export const qualimaxProducts: Product[] = [
   // Chocolatadas
   {
     id: "choco-300",
-    titulo: "Chocolatada en polvo Qualimax",
+    titulo: "Chocolatada en polvo Qualimax - 300g",
     descripcion: "La chocolatada en polvo Qualimax es instantánea y ya viene endulzada. Alimento en polvo a base de cacao.",
     detalles: {
       peso_neto: "300 g",
@@ -45,10 +45,11 @@ export const qualimaxProducts: Product[] = [
       caracteristicas: ["Sin gluten", "Instantánea", "Endulzada"],
     },
     category: "chocolatadas",
+    image: "/assets/Chocolatada-300g.png",
   },
   {
     id: "choco-1kg",
-    titulo: "Chocolatada en polvo Qualimax",
+    titulo: "Chocolatada en polvo Qualimax - 1kg",
     descripcion: "La chocolatada en polvo Qualimax es instantánea y ya viene endulzada. Alimento en polvo a base de cacao.",
     detalles: {
       peso_neto: "1 kg",
@@ -57,6 +58,7 @@ export const qualimaxProducts: Product[] = [
       caracteristicas: ["Sin gluten", "Instantánea", "Endulzada"],
     },
     category: "chocolatadas",
+    image: "/assets/Chocolatada-1kg.png",
   },
   // Gelatinas
   {
@@ -70,47 +72,155 @@ export const qualimaxProducts: Product[] = [
       cantidad_por_sobre: "30 x 24 g",
     },
     category: "gelatinas",
+    image: "/placeholder.svg",
   },
   {
-    id: "gel-saborizada",
-    titulo: "Gelatina saborizada",
+    id: "gel-frutilla",
+    titulo: "Gelatina saborizada - Frutilla",
     descripcion: "Gelatinas para completar el mix y aumentar las ventas. Rinde 4 porciones de 120 g.",
     detalles: {
       peso_neto: "20 g",
-      sabores: ["Frutilla", "Frambuesa", "Ananá", "Cereza"],
       validez: "18 meses",
       cantidad_por_caja: "6 x 15 x 20 g",
       caracteristicas: ["Sin gluten", "Dietética"],
     },
     category: "gelatinas",
+    image: "/assets/Gelatina-Frutilla.png",
   },
-  // Jugos
   {
-    id: "jugo-1l",
-    titulo: "Jugos en polvo 15g",
+    id: "gel-frambuesa",
+    titulo: "Gelatina saborizada - Frambuesa",
+    descripcion: "Gelatinas para completar el mix y aumentar las ventas. Rinde 4 porciones de 120 g.",
+    detalles: {
+      peso_neto: "20 g",
+      validez: "18 meses",
+      cantidad_por_caja: "6 x 15 x 20 g",
+      caracteristicas: ["Sin gluten", "Dietética"],
+    },
+    category: "gelatinas",
+    image: "/assets/Gelatina-Frambuesa.png",
+  },
+  {
+    id: "gel-anana",
+    titulo: "Gelatina saborizada - Ananá",
+    descripcion: "Gelatinas para completar el mix y aumentar las ventas. Rinde 4 porciones de 120 g.",
+    detalles: {
+      peso_neto: "20 g",
+      validez: "18 meses",
+      cantidad_por_caja: "6 x 15 x 20 g",
+      caracteristicas: ["Sin gluten", "Dietética"],
+    },
+    category: "gelatinas",
+    image: "/assets/Gelatina-Anana.png",
+  },
+  {
+    id: "gel-cereza",
+    titulo: "Gelatina saborizada - Cereza",
+    descripcion: "Gelatinas para completar el mix y aumentar las ventas. Rinde 4 porciones de 120 g.",
+    detalles: {
+      peso_neto: "20 g",
+      validez: "18 meses",
+      cantidad_por_caja: "6 x 15 x 20 g",
+      caracteristicas: ["Sin gluten", "Dietética"],
+    },
+    category: "gelatinas",
+    image: "/assets/Gelatina-Cereza.png",
+  },
+  // Jugos 1L
+  {
+    id: "jugo-1l-anana",
+    titulo: "Jugos en polvo 1L - Ananá",
     descripcion: "Los sobres Qualimax 15g rinden mucho más. Tienen un sabor intenso, acidez equilibrada y son ricos en vitamina C.",
     detalles: {
       peso_neto: "15 g",
       rendimiento: "1 Litro",
-      sabores: ["Ananá", "Naranja", "Limón", "Frutilla", "Maracuyá"],
       validez: "18 meses",
       cantidad_por_sobre: "8 x 15 x 15 g",
     },
     category: "jugos",
+    image: "/assets/Jugo-Anana-1L.png",
   },
   {
-    id: "jugo-2l",
-    titulo: "Jugos en polvo 15g",
+    id: "jugo-1l-limon",
+    titulo: "Jugos en polvo 1L - Limón",
+    descripcion: "Los sobres Qualimax 15g rinden mucho más. Tienen un sabor intenso, acidez equilibrada y son ricos en vitamina C.",
+    detalles: {
+      peso_neto: "15 g",
+      rendimiento: "1 Litro",
+      validez: "18 meses",
+      cantidad_por_sobre: "8 x 15 x 15 g",
+    },
+    category: "jugos",
+    image: "/assets/Jugo-Limon-1L.png",
+  },
+  {
+    id: "jugo-1l-frutilla",
+    titulo: "Jugos en polvo 1L - Frutilla",
+    descripcion: "Los sobres Qualimax 15g rinden mucho más. Tienen un sabor intenso, acidez equilibrada y son ricos en vitamina C.",
+    detalles: {
+      peso_neto: "15 g",
+      rendimiento: "1 Litro",
+      validez: "18 meses",
+      cantidad_por_sobre: "8 x 15 x 15 g",
+    },
+    category: "jugos",
+    image: "/assets/Jugo-Frutilla-1L.png",
+  },
+  {
+    id: "jugo-1l-maracuya",
+    titulo: "Jugos en polvo 1L - Maracuyá",
+    descripcion: "Los sobres Qualimax 15g rinden mucho más. Tienen un sabor intenso, acidez equilibrada y son ricos en vitamina C.",
+    detalles: {
+      peso_neto: "15 g",
+      rendimiento: "1 Litro",
+      validez: "18 meses",
+      cantidad_por_sobre: "8 x 15 x 15 g",
+    },
+    category: "jugos",
+    image: "/assets/Jugo-Maracuya-1L.png",
+  },
+  // Jugos 2L
+  {
+    id: "jugo-2l-naranja",
+    titulo: "Jugos en polvo 2L - Naranja",
     descripcion: "Polvo para preparar bebida analcohólica artificial dietética. Ya viene endulzado y fortificado con vitamina C.",
     detalles: {
       peso_neto: "15 g",
       rendimiento: "2 Litros",
-      sabores: ["Naranja", "Ananá", "Limón"],
       validez: "18 meses",
       cantidad_por_sobre: "8 x 15 x 15 g",
       caracteristicas: ["Sin gluten", "Dietético", "Endulzado"],
     },
     category: "jugos",
+    image: "/assets/Jugo-Naranja-2L.png",
+  },
+  {
+    id: "jugo-2l-anana",
+    titulo: "Jugos en polvo 2L - Ananá",
+    descripcion: "Polvo para preparar bebida analcohólica artificial dietética. Ya viene endulzado y fortificado con vitamina C.",
+    detalles: {
+      peso_neto: "15 g",
+      rendimiento: "2 Litros",
+      validez: "18 meses",
+      cantidad_por_sobre: "8 x 15 x 15 g",
+      caracteristicas: ["Sin gluten", "Dietético", "Endulzado"],
+    },
+    category: "jugos",
+    image: "/assets/Jugo-Anana-2L.png",
+  },
+  {
+    id: "jugo-2l-limon",
+    titulo: "Jugos en polvo 2L - Limón",
+    descripcion: "Polvo para preparar bebida analcohólica artificial dietética. Ya viene endulzado y fortificado con vitamina C.",
+    detalles: {
+      peso_neto: "15 g",
+      rendimiento: "2 Litros",
+      validez: "18 meses",
+      cantidad_por_sobre: "8 x 15 x 15 g",
+      caracteristicas: ["Sin gluten", "Dietético", "Endulzado"],
+    },
+    category: "jugos",
+    image: "/assets/Jugo-Limon-2L.png",
   },
   // Avenas
   {
@@ -123,6 +233,7 @@ export const qualimaxProducts: Product[] = [
       presentacion: "Caja 12 x 170 g",
     },
     category: "avenas",
+    image: "/assets/Avena-tradicional.png",
   },
   // Salsa de tomate
   {
@@ -137,6 +248,7 @@ export const qualimaxProducts: Product[] = [
       caracteristicas: ["Sin gluten"],
     },
     category: "salsa-tomate",
+    image: "/assets/Salsa-de-tomate.png",
   },
   // Línea confitera
   {
@@ -150,5 +262,6 @@ export const qualimaxProducts: Product[] = [
       caracteristicas: ["Sin gluten", "Uso profesional"],
     },
     category: "linea-confitera",
+    image: "/assets/Crema-pastelera.png",
   },
 ];
