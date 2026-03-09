@@ -1,4 +1,5 @@
 import { ShieldCheck, Truck, Handshake } from "lucide-react";
+import { motion } from "framer-motion";
 
 const values = [
   {
@@ -32,17 +33,22 @@ const AboutSection = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {values.map((v) => (
-            <div
+          {values.map((v, index) => (
+            <motion.div
               key={v.title}
-              className="text-center p-8 rounded-2xl bg-secondary/50 border border-border hover:shadow-lg transition-shadow"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              whileHover={{ scale: 1.05 }}
+              className="text-center p-8 rounded-2xl bg-secondary/50 border border-border hover:shadow-xl transition-shadow cursor-default"
             >
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-5">
                 <v.icon size={28} />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">{v.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{v.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

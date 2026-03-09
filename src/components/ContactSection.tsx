@@ -7,11 +7,39 @@ import { useToast } from "@/hooks/use-toast";
 const ContactSection = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({ title: "Mensaje enviado", description: "Nos pondremos en contacto pronto." });
-    setForm({ name: "", email: "", phone: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/atencionalcliente@sygfoods.com.ar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          Nombre: form.name,
+          Email: form.email,
+          Teléfono: form.phone,
+          Mensaje: form.message,
+          _subject: "Nuevo contacto desde la web de SyG Foods"
+        })
+      });
+
+      if (response.ok) {
+        toast({ title: "Mensaje enviado", description: "Nos pondremos en contacto pronto." });
+        setForm({ name: "", email: "", phone: "", message: "" });
+      } else {
+        toast({ title: "Error", description: "Hubo un problema al enviar el mensaje. Intentá nuevamente.", variant: "destructive" });
+      }
+    } catch (error) {
+      toast({ title: "Error", description: "Hubo un problema de conexión. Intentá nuevamente.", variant: "destructive" });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -56,9 +84,10 @@ const ContactSection = () => {
           <Button
             type="submit"
             size="lg"
-            className="w-full bg-accent text-accent-foreground hover:bg-accent/90 rounded-full text-base"
+            disabled={isSubmitting}
+            className="w-full bg-accent text-accent-foreground hover:bg-accent/90 rounded-full text-base transition-all"
           >
-            Enviar mensaje
+            {isSubmitting ? "Enviando..." : "Enviar mensaje"}
           </Button>
         </form>
       </div>
