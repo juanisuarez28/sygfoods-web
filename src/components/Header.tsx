@@ -28,9 +28,9 @@ const Header = () => {
   }, []);
 
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-primary shadow-md" : "bg-secondary"}`}>
-    <div className="container mx-auto flex items-center justify-between px-4 py-3">
+    <div className="container mx-auto flex items-center justify-between px-4 py-2 md:py-3">
       <a href="#inicio">
-        <img src={scrolled ? sygLogo3 : sygLogo1} alt="SYGfoods" className="h-12 md:h-20" />
+        <img src={scrolled ? sygLogo3 : sygLogo1} alt="SYGfoods" className="h-10 md:h-14 lg:h-16" />
       </a>
 
       {/* Desktop nav */}

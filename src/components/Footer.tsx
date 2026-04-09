@@ -19,10 +19,10 @@ const Footer = () => {
             <h4 className="font-semibold mb-4 text-sm uppercase tracking-wider">Contacto</h4>
             <ul className="space-y-3 text-sm text-background/70 flex flex-col items-center">
               <li className="flex items-center gap-2">
-                <Mail size={16} /> foods@scorygal.com.ar
+                <Mail size={16} /> atencionalcliente@sygfoods.com.ar
               </li>
               <li className="flex items-center gap-2">
-                <Phone size={16} /> 0800-333-093
+                <Phone size={16} /> 0800-333-0794
               </li>
               <li className="flex items-center gap-2 text-center max-w-md">
                 <MapPin size={16} className="shrink-0" /> RP55 km 65.7, B7620, Balcarce, Buenos Aires, Argentina

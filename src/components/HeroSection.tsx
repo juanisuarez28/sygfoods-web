@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-primary/90 to-primary/70"
+      className="relative min-h-[85vh] flex items-center justify-center bg-gradient-to-br from-primary/90 to-primary/70 pt-16 md:pt-[100px]"
     >
       {/* Overlay pattern */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_30%_50%,white_1px,transparent_1px)] bg-[length:24px_24px]" />
@@ -12,7 +12,7 @@ const HeroSection = () => {
       <div className="relative z-10 container mx-auto px-4 text-center">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6">
           Tu distribuidor de alimentos<br />
-          <span className="text-accent">de calidad importados</span>
+          <span className="text-accent">importados de calidad</span>
         </h1>
         <p className="text-lg md:text-xl text-primary-foreground/85 max-w-2xl mx-auto mb-10">
           Llevamos las mejores marcas de Brasil y el mundo a tu negocio. Calidad, confianza y variedad en cada producto.
