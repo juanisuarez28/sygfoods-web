@@ -3,10 +3,12 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import alcaLogo from "@/assets/alcafoods-logo.png";
 import qualimaxLogo from "@/assets/qualimax-logo.png";
+import seniorLogo from "@/assets/senior-logo.png";
 
 const brands = [
   { name: "AlcaFoods", logo: alcaLogo, catalogUrl: "/catalogo/alcafoods" },
   { name: "Qualimax", logo: qualimaxLogo, catalogUrl: "/catalogo/qualimax" },
+  { name: "Senior", logo: seniorLogo, catalogUrl: "/catalogo/senior" },
 ];
 
 const BrandsSection = () => {
@@ -17,7 +19,7 @@ const BrandsSection = () => {
           Marcas que <span className="text-primary">distribuimos</span>
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {brands.map((brand, index) => (
             <motion.div
               key={brand.name}

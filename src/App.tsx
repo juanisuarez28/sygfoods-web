@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import CatalogoQualimax from "./pages/CatalogoQualimax";
 import CatalogoAlcafoods from "./pages/CatalogoAlcafoods";
+import CatalogoSenior from "./pages/CatalogoSenior";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/catalogo/qualimax" element={<CatalogoQualimax />} />
           <Route path="/catalogo/alcafoods" element={<CatalogoAlcafoods />} />
+          <Route path="/catalogo/senior" element={<CatalogoSenior />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
